@@ -19,9 +19,7 @@
 .cell{
   border: 0.5px solid #ccc;
 }
-.cell:hover{
-  background-color: #3c3c3c;
-}
+
 .dark-bg{
   background-color: #3c3c3c;
 }

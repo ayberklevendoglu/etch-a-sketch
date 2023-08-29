@@ -1,46 +1,40 @@
-
-
+let board = document.querySelector(".board");
+let mouseDown = false;
+board.onmousedown = function (event) {
+  event.preventDefault();
+  mouseDown = true;
+};
+board.onmouseup = function (event) {
+  event.preventDefault();
+  mouseDown = false;
+};
 
 function createBoard(size) {
   let board = document.querySelector(".board");
+  let squares = document.querySelectorAll(".cell");
+  squares.forEach((square) => {
+    board.removeChild(square);
+  });
   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-  for (let i = 0; i < size*size; i++) {
+  for (let i = 0; i < size * size; i++) {
     const div = document.createElement("div");
     div.classList.add("cell");
+    div.addEventListener("mouseenter", () => {
+      console.log(mouseDown);
+      if (mouseDown) {
+        blackBoard(div);
+      }
+    });
     board.appendChild(div);
   }
 }
 
-function changeSize() {
-  let size = prompt("Enter the size of the board");
-  switch (true) {
-    case (size > 100):
-      alert("Size should be less than 100");
-      return;
-    case (size < 16):
-      alert("Size should be greater than 15");
-      return;
-    case (size == null):
-      return;
-    case (isNaN(size)):
-      alert("Size should be a number");
-      return;
-    case (size.includes(".")):
-      alert("Size should be an integer");
-      return;
-    case (size.includes(" ")):
-      alert("Size should not contain spaces");
-      return;
-  }
-  let board = document.querySelector(".board");
-  board.innerHTML = "";
-  createBoard(size);
+function changeSize(input) {
+  createBoard(input);
 }
 
-let changeSizeBtn = document.querySelector(".change-size-btn");
-changeSizeBtn.addEventListener("click", changeSize);
 
 function resetBoard() {
   let cells = document.querySelectorAll(".cell");
@@ -52,18 +46,6 @@ function resetBoard() {
 let resetBtn = document.querySelector(".reset-btn");
 resetBtn.addEventListener("click", resetBoard);
 
-
-function blackBoard() {
-  let cells = document.querySelectorAll(".cell");
-  cells.forEach((cell) => {
-    cell.classList.add("dark-bg");
-  });
+function blackBoard(cell) {
+  cell.classList.add("dark-bg");
 }
-
-let cells = document.querySelectorAll(".cell");
-cells.forEach((cell) => {
-  cell.addEventListener("mouseover", blackBoard);
-});
-
-
-
