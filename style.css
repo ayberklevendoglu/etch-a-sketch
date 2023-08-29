@@ -1,0 +1,27 @@
+.board{
+  width: 500px;
+  height: 500px;
+  display: grid;
+}
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 2;
+  height: 100vh;
+}
+.content{
+  border: #ccc 0.5px solid;
+}
+
+.cell{
+  border: 0.5px solid #ccc;
+}
+.cell:hover{
+  background-color: #3c3c3c;
+}
+.dark-bg{
+  background-color: #3c3c3c;
+}
