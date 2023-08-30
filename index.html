@@ -13,13 +13,22 @@
         <div class="board"></div>
       </div>
       <div class="buttons">
-        <button onclick="changeColor('black')" class="btn-primary">Black</button>
-        <button onclick="changeColor('white')" class="btn-light">Eraser</button>
-        <button onclick="changeColor('random')" class="btn-colorful">Random</button>
-        <button class="reset-btn btn-primary" >Reset</button>
+        <button class="btn-primary">
+          Black
+        </button>
+        <button class="btn-light">Eraser</button>
+        <button  class="btn-colorful">
+          Random
+        </button>
+        <button class="reset-btn btn-primary">Reset</button>
       </div>
       <div>
-        <input type="text" placeholder="Size of board" class=".size-input" onchange="changeSize(this.value)">
+        <input
+          type="text"
+          placeholder="Size of board"
+          class=".size-input"
+          onchange="changeSize(this.value)"
+        />
         <button class="btn-size btn-primary">Set Size</button>
       </div>
     </div>

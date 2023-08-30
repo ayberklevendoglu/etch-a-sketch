@@ -46,17 +46,31 @@ function resetBoard() {
 let resetBtn = document.querySelector(".reset-btn");
 resetBtn.addEventListener("click", resetBoard);
 
-function colorSquare(){
-  if(mouseDown){
-    if(color === 'random'){
-      this.style.backgroundColor = 'hsl(' + (360 * Math.random()) + ',50%,50%)';
-    }else{
+function colorSquare() {
+  if (mouseDown) {
+    if (color === "random") {
+      this.style.backgroundColor = "hsl(" + 360 * Math.random() + ",50%,50%)";
+    } else {
       this.style.backgroundColor = color;
     }
-}
+  }
 }
 
-function changeColor(choice){
+function changeColor(choice) {
   color = choice;
 }
 
+let btnRandom = document.querySelector(".btn-colorful");
+btnRandom.addEventListener("click",() =>{
+  changeColor("random")
+});
+
+let btnPrimary = document.querySelector(".btn-primary");
+btnPrimary.addEventListener("click",() =>{
+  changeColor("black")
+});
+
+let btnEraser = document.querySelector(".btn-light");
+btnEraser.addEventListener("click",() =>{
+  changeColor("white")
+});

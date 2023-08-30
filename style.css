@@ -1,6 +1,10 @@
-body{
-  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  font-family: 'Roboto', sans-serif;
+body {
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #3c3c3c;
   margin: 0;
@@ -9,12 +13,12 @@ body{
   overflow-x: hidden;
 }
 
-.board{
+.board {
   width: 700px;
   height: 700px;
   display: grid;
 }
-.flex-container{
+.flex-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,15 +27,15 @@ body{
   line-height: 2;
   height: 100vh;
 }
-.content{
+.content {
   border: #3c3c3c 0.5px solid;
   background-color: #fff;
 }
-.dark-bg{
+.dark-bg {
   background-color: #3c3c3c;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: #3c3c3c;
   color: #fff;
   border: none;
@@ -41,12 +45,12 @@ body{
   font-size: 16px;
   margin: 10px;
 }
-.btn-primary:hover{
+.btn-primary:hover {
   background-color: #fff;
   color: #3c3c3c;
   border: #3c3c3c 1px solid;
 }
-.btn-light{
+.btn-light {
   background-color: #fff;
   color: #3c3c3c;
   border: #3c3c3c 1px solid;
@@ -56,13 +60,18 @@ body{
   font-size: 16px;
   margin: 10px;
 }
-.btn-light:hover{
+.btn-light:hover {
   background-color: #3c3c3c;
   color: #fff;
   border: none;
 }
-.btn-colorful{
-  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);
+.btn-colorful {
+  background-image: linear-gradient(
+    to right,
+    #84fab0 0%,
+    #8fd3f4 51%,
+    #84fab0 100%
+  );
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -72,5 +81,10 @@ body{
   margin: 10px;
 }
 .btn-colorful:hover {
-  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+  background-image: linear-gradient(
+    to right,
+    #f6d365 0%,
+    #fda085 51%,
+    #f6d365 100%
+  );
 }
